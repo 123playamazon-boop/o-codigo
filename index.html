@@ -5,7 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>O Código — Pare de ser "visualizado e esquecido"</title>
 <meta name="description" content="A mensagem pronta pra cada situação — do primeiro 'oi' ao 'quer sair comigo?'. Pare de travar na frente da tela.">
-<!-- TRACKING: colar Meta Pixel + Microsoft Clarity aqui quando for subir -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1055470594182614');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1055470594182614&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","z61uakfdh7");
+</script>
+<!-- End Microsoft Clarity -->
 <style>
   :root{
     --bg:#0b0c0f; --surface:#14161b; --surface2:#1b1e25; --line:#2a2e37;
@@ -456,7 +467,7 @@
         <div class="now"><small>R$</small>27<small>,00</small></div>
         <div class="pay">à vista no Pix ou em até 3x no cartão</div>
       </div>
-      <a href="#" id="checkout" class="cta block lg">QUERO OS 2 CÓDIGOS AGORA →</a>
+      <a href="https://pay.cakto.com.br/7uqtb6e_1263698" id="checkout" class="cta block lg">QUERO OS 2 CÓDIGOS AGORA →</a>
       <div class="seal">🔒 Compra 100% segura • acesso na hora por e-mail</div>
     </div>
   </div>
@@ -520,6 +531,9 @@
     // CHECKOUT: trocar '#' pelo link do produto na Cakto nos dois botoes (#checkout e os <a href="#oferta"> ja rolam ate a oferta)
     // document.getElementById('checkout').href = 'https://pay.cakto.com.br/XXXX';
   })();
+</script>
+<script>
+(function(){var b=document.getElementById('checkout');if(b){b.addEventListener('click',function(){try{if(window.fbq)fbq('track','InitiateCheckout');}catch(e){}});}})();
 </script>
 </body>
 </html>
