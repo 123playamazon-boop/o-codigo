@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>O Código — Pare de ser "visualizado e esquecido"</title>
-<meta name="description" content="A mensagem pronta pra cada situação — do primeiro 'oi' ao 'quer sair comigo?'. Pare de travar na frente da tela.">
+<title>Código Vórcaro — 300 mensagens prontas que fazem ela responder</title>
+<meta name="description" content="O método com 300 mensagens prontas pra flertar, criar conexão e marcar encontros de verdade. Funciona em qualquer app. Acesso imediato e 100% discreto.">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -19,521 +19,311 @@ fbq('init','1055470594182614');fbq('track','PageView');
 <!-- End Microsoft Clarity -->
 <style>
   :root{
-    --bg:#0b0c0f; --surface:#14161b; --surface2:#1b1e25; --line:#2a2e37;
-    --fg:#f5f2ec; --muted:#a7adba; --faint:#6e7585;
-    --accent:#e0a44b; --accent2:#c6863a; --accentSoft:#f0c074; --ok:#49c17a; --danger:#e06a5a;
-    --wa:#005c4b; --wain:#202c33; --wabg:#0b141a;
-    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --bg:#09090b; --surface:#131317; --surface2:#1b1b21; --line:#2a2a33;
+    --fg:#f6f4f1; --muted:#a6a6b0; --faint:#6a6a75;
+    --red:#ff2b3b; --red2:#e01123; --redDeep:#b10d1b;
+    --ok:#2fd27a;
+    --radius:16px; --maxw:860px;
+    --glow:0 10px 40px rgba(255,43,59,.35);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--fg);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  img{max-width:100%;display:block}
-  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
-  .narrow{max-width:720px}
-  section{padding:58px 0}
-  h1,h2,h3{line-height:1.14;letter-spacing:-0.02em;font-weight:800}
-  h1{font-size:2.15rem} h2{font-size:1.7rem} h3{font-size:1.15rem}
-  p{color:#e7e3da}
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .section{padding:54px 0}
+  h1,h2,h3{line-height:1.12;margin:0 0 .5em;font-weight:800;letter-spacing:-.01em}
+  h1{font-size:clamp(1.9rem,6.2vw,3.1rem)}
+  h2{font-size:clamp(1.5rem,4.6vw,2.2rem)}
+  p{margin:0 0 1em;color:#e7e5e2}
+  .muted{color:var(--muted)} .red{color:var(--red)}
   .center{text-align:center}
-  .eyebrow{color:var(--accent);font-weight:700;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
-  .muted{color:var(--muted)} em{color:var(--accent);font-style:normal} .accent{color:var(--accent)}
-  .cta{display:inline-block;background:linear-gradient(180deg,var(--accentSoft),var(--accent2));color:#1a1206;font-weight:800;
-    font-size:1.08rem;text-decoration:none;padding:17px 32px;border-radius:14px;border:none;cursor:pointer;
-    box-shadow:0 12px 34px rgba(224,164,75,.3);transition:transform .15s}
-  .cta:hover{transform:translateY(-2px)}
-  .cta.block{display:block;text-align:center;width:100%}
-  .cta.lg{font-size:1.18rem;padding:20px 32px}
-  .sub-cta{color:var(--faint);font-size:.9rem;margin-top:.85rem}
-  /* topbar */
+  .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    color:#fff;background:linear-gradient(90deg,var(--red2),var(--red));padding:7px 14px;border-radius:999px;box-shadow:var(--glow)}
+  .cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-align:center;
+    background:linear-gradient(90deg,var(--red2),var(--red));color:#fff;font-weight:900;
+    font-size:1.08rem;letter-spacing:.01em;padding:17px 26px;border-radius:14px;border:0;cursor:pointer;
+    box-shadow:var(--glow);transition:transform .12s ease, box-shadow .12s ease;width:auto;text-transform:uppercase}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 14px 48px rgba(255,43,59,.5)}
+  .cta.block{display:flex;width:100%}
+  .cta.lg{font-size:1.15rem;padding:19px 26px}
+  .cta .arw{font-size:1.1em}
+  .cta-sub{font-size:.82rem;color:var(--muted);margin-top:10px}
   .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)}
-  .brand{font-weight:800;font-size:1.3rem;letter-spacing:-.02em} .brand span{color:var(--accent)}
-  .topbar .tag{font-size:.76rem;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:999px}
-  /* hero */
-  .hero{padding-top:46px;padding-bottom:20px}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-  .hero h1{margin-bottom:1.1rem}
-  .hero .lede{font-size:1.1rem;color:#d7d3ca;margin-bottom:1.5rem}
-  .hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
-  .hb{font-size:.8rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:7px 12px;border-radius:999px}
-  /* phone */
-  .phone{width:300px;max-width:84vw;margin:0 auto;background:#060708;border-radius:40px;padding:11px;border:1px solid #30343d;
-    box-shadow:0 30px 70px rgba(0,0,0,.55)}
-  .phone .screen{background:var(--wabg);border-radius:30px;overflow:hidden;position:relative}
-  .wa-head{background:var(--wain);padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #000}
-  .wa-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#8a5a2a,#e0a44b);flex-shrink:0}
-  .wa-nm{font-size:.86rem;font-weight:600;color:#e9edef} .wa-st{font-size:.68rem;color:#8696a0}
-  .wa-body{padding:14px 12px 16px;display:flex;flex-direction:column;gap:7px;
-    background-image:radial-gradient(rgba(255,255,255,.015) 1px,transparent 1px);background-size:14px 14px;min-height:220px}
-  .msg{max-width:80%;padding:7px 10px 5px;border-radius:9px;font-size:.84rem;line-height:1.35;position:relative;color:#e9edef}
-  .msg .t{display:block;font-size:.58rem;color:#8696a0;text-align:right;margin-top:2px}
-  .in{background:var(--wain);align-self:flex-start;border-top-left-radius:2px}
-  .out{background:var(--wa);align-self:flex-end;border-top-right-radius:2px}
-  .out .t{color:#9fd3c7}
-  .daychip{align-self:center;background:#182229;color:#8696a0;font-size:.62rem;padding:3px 9px;border-radius:7px;margin:3px 0}
-  /* hero image + bands */
-  .hero-img{width:100%;border-radius:20px;border:1px solid var(--line);box-shadow:0 26px 60px rgba(0,0,0,.5);display:block}
-  .band{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,.45)}
-  .band img{width:100%;display:block;max-height:440px;object-fit:cover;object-position:center 32%}
-  .band .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 20px;
-    background:linear-gradient(transparent,rgba(8,8,10,.82));color:#fff}
-  .band .cap p{font-weight:800;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em;color:#fff;max-width:620px}
-  .band .cap .sm{font-weight:500;font-size:.92rem;color:#e4dccf;margin-top:.35rem}
-  @media(max-width:620px){ .band img{max-height:340px} .band .cap p{font-size:1.05rem} }
-  /* strip */
-  .strip{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
-  .strip .row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center}
-  .strip .big{font-size:1.8rem;font-weight:800;color:var(--accent);line-height:1}
-  .strip .lbl{font-size:.78rem;color:var(--muted);margin-top:.3rem}
-  /* pain */
-  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1.7rem}
-  .pcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
-  .pcard .x{color:var(--danger);font-weight:800;margin-right:.3rem}
-  .pcard p{font-size:.97rem;color:#ded9d0}
-  /* reframe */
-  .reframe .box{background:var(--surface);border-left:3px solid var(--accent);border-radius:12px;padding:28px 26px}
-  .reframe h2{margin-bottom:.8rem}
-  /* codes */
-  .codes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:1.8rem}
-  .code{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
-  .code .n{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--accent);
-    border:1px solid var(--accent2);border-radius:999px;padding:4px 11px;margin-bottom:.9rem;text-transform:uppercase}
-  .code h3{margin-bottom:.9rem;font-size:1.22rem}
-  .code ul{list-style:none;display:grid;gap:.6rem}
-  .code li{position:relative;padding-left:1.4rem;font-size:.94rem;color:#ded9d0}
-  .code li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:2px;background:var(--accent)}
-  /* inside gallery */
-  .inside{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .phones{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:2rem;align-items:start}
-  .phones .cap{text-align:center;color:var(--muted);font-size:.82rem;margin-top:.8rem}
-  /* material mockup */
-  .material{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center;margin-top:1.4rem}
-  .books{position:relative;display:flex;justify-content:center;gap:-10px}
-  .book{width:168px;height:236px;border-radius:6px 12px 12px 6px;padding:22px 18px;color:#fff;position:relative;
-    box-shadow:0 22px 44px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
-  .book::after{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:rgba(0,0,0,.28);border-radius:6px 0 0 6px}
-  .book .bk{font-size:.62rem;letter-spacing:.18em;opacity:.8;text-transform:uppercase}
-  .book .bt{font-size:1.35rem;font-weight:800;line-height:1.1;margin-top:auto}
-  .book.b1{background:linear-gradient(160deg,#20242e,#0e1014);transform:rotate(-6deg) translateX(14px)}
-  .book.b2{background:linear-gradient(160deg,#3a2a12,#1a1206);transform:rotate(5deg) translateX(-14px);margin-left:-40px;margin-top:26px}
-  .book .inner{display:flex;flex-direction:column;height:100%}
-  .book .line{height:2px;background:var(--accent);width:34px;margin:10px 0}
-  /* how */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:1.8rem}
-  .step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center}
-  .step .num{width:40px;height:40px;border-radius:50%;background:linear-gradient(180deg,var(--accentSoft),var(--accent2));
-    color:#1a1206;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;font-size:1.1rem}
-  .step h3{font-size:1.05rem;margin-bottom:.4rem} .step p{font-size:.9rem;color:var(--muted)}
-  /* forwho */
-  .forwho{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:1.7rem}
-  .fw{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
-  .fw h3{font-size:1.05rem;margin-bottom:.8rem}
-  .fw ul{list-style:none;display:grid;gap:.55rem} .fw li{font-size:.94rem;color:#ded9d0;padding-left:1.6rem;position:relative}
-  .fw.yes li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
-  .fw.no li::before{content:"✕";position:absolute;left:0;color:var(--danger);font-weight:800}
-  /* testimonials */
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:1.8rem}
-  .tcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
-  .tcard .stars{color:var(--accent);letter-spacing:2px;font-size:.9rem;margin-bottom:.7rem}
-  .tcard .q{font-size:.95rem;color:#ece8df;line-height:1.55}
-  .tcard .who{display:flex;align-items:center;gap:.6rem;margin-top:1.1rem}
-  .tcard .av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#8a5a2a,#e0a44b);color:#1a1206;
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem}
-  .tcard .nm{font-weight:700;font-size:.88rem} .tcard .meta{font-size:.72rem;color:var(--faint)}
-  /* offer */
-  .offer{background:linear-gradient(180deg,#140f09,#0b0c0f)}
-  .obox{background:var(--surface);border:1px solid var(--accent2);border-radius:22px;padding:32px 26px;text-align:center;
-    box-shadow:0 26px 64px rgba(0,0,0,.45);max-width:560px;margin:1.6rem auto 0}
-  .obox h2{margin-bottom:.3rem}
-  .stack{text-align:left;max-width:460px;margin:1.5rem auto;display:grid;gap:.6rem}
-  .stack .it{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed var(--line);padding-bottom:.6rem;font-size:.95rem;color:#ded9d0}
-  .stack .it b{color:#fff;font-weight:600} .stack .it .v{color:var(--faint);white-space:nowrap}
-  .price{margin:1.4rem 0 .4rem}
-  .price .from{color:var(--faint);text-decoration:line-through;font-size:1.05rem}
-  .price .now{font-size:3.1rem;font-weight:800;letter-spacing:-.03em;line-height:1}
-  .price .now small{font-size:1.1rem;font-weight:700;vertical-align:top}
-  .price .pay{color:var(--muted);font-size:.9rem;margin-top:.3rem}
-  .seal{display:flex;align-items:center;gap:.5rem;justify-content:center;margin-top:1.3rem;color:var(--muted);font-size:.85rem}
-  /* guarantee */
-  .guar .box{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:center;background:var(--surface);
-    border:1px solid var(--line);border-radius:18px;padding:26px}
-  .guar .sb{width:92px;height:92px;border-radius:50%;background:linear-gradient(180deg,var(--accentSoft),var(--accent2));
-    display:flex;flex-direction:column;align-items:center;justify-content:center;color:#1a1206;font-weight:800;line-height:1;flex-shrink:0}
-  .guar .sb b{font-size:1.9rem} .guar .sb span{font-size:.6rem;letter-spacing:.1em}
-  /* faq */
-  .faq details{border:1px solid var(--line);border-radius:12px;padding:2px 18px;margin-bottom:.7rem;background:var(--surface)}
-  .faq summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary .plus{color:var(--accent);font-size:1.4rem;line-height:1}
-  .faq details[open] summary .plus{transform:rotate(45deg)}
-  .faq p{color:var(--muted);font-size:.95rem;padding-bottom:16px}
-  /* final */
-  .final{text-align:center}
-  .final h2{max-width:620px;margin:0 auto 1.4rem}
-  /* footer */
-  footer{border-top:1px solid var(--line);padding:30px 0 120px;color:var(--faint);font-size:.82rem}
-  footer .disc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:18px;line-height:1.55}
-  /* sticky */
-  #sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(14,15,19,.96);backdrop-filter:blur(8px);
-    border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
-    display:flex;align-items:center;justify-content:center;gap:12px;transition:transform .25s}
+  .topbar img{height:46px;width:auto;filter:drop-shadow(0 4px 14px rgba(255,43,59,.35))}
+  .topbar .badge{font-size:.72rem;color:var(--muted);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+  .hero{padding:40px 0 10px}
+  .hero .eyebrow{font-weight:900;color:var(--red);letter-spacing:.06em;text-transform:uppercase;font-size:.92rem;margin-bottom:12px}
+  .hero h1 b{color:var(--red)}
+  .hero .lead{font-size:1.08rem;max-width:620px;margin:0 auto 22px}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:16px 0 26px}
+  .pill{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line);
+    border-radius:999px;padding:9px 14px;font-size:.84rem;font-weight:700}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--red)}
+  .hero-img{margin:30px auto 0;max-width:620px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;margin-top:26px}
+  .stats div{background:var(--surface);padding:18px 10px;text-align:center}
+  .stats b{display:block;font-size:1.5rem;color:var(--red);font-weight:900}
+  .stats span{font-size:.76rem;color:var(--muted)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .pain ul{margin:0;padding:0;display:grid;gap:12px}
+  .pain li{list-style:none;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--red);
+    border-radius:12px;padding:14px 16px;font-weight:600}
+  .check ul{margin:0;padding:0;display:grid;gap:14px}
+  .check li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:1.02rem}
+  .check .ic{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(47,210,122,.14);
+    color:var(--ok);display:flex;align-items:center;justify-content:center;font-weight:900;margin-top:1px}
+  .cats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cat{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);
+    border-radius:12px;padding:14px 15px}
+  .cat .n{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--red2),var(--red));
+    color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:.9rem;box-shadow:var(--glow)}
+  .cat b{font-size:.98rem} .cat span{display:block;font-size:.78rem;color:var(--muted)}
+  .chats{display:grid;gap:14px;max-width:460px;margin:0 auto}
+  .chat{background:#0e1b14;border:1px solid #16351f;border-radius:16px;padding:14px 16px;position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,.5)}
+  .chat .who{font-size:.74rem;color:#58d38a;font-weight:800;margin-bottom:4px}
+  .chat p{margin:0;color:#eafff0;font-size:.98rem}
+  .chat .time{display:block;text-align:right;font-size:.68rem;color:#6ea885;margin-top:4px}
+  .chat .heart{position:absolute;top:-8px;right:14px;font-size:1.1rem}
+  .band{position:relative;margin:36px 0;border-radius:var(--radius);overflow:hidden;min-height:220px;
+    display:flex;align-items:center;border:1px solid var(--line)}
+  .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.4) saturate(1.1)}
+  .band .bx{position:relative;padding:28px 24px;z-index:2}
+  .band h2{margin:0}
+  .steps{display:grid;gap:14px}
+  .step{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .step .num{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--red2),var(--red));
+    color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:var(--glow)}
+  .offer{background:linear-gradient(180deg,#17171c,#101014);border:1px solid var(--line);border-radius:22px;
+    padding:28px 22px;box-shadow:0 24px 70px rgba(0,0,0,.6);position:relative;overflow:hidden}
+  .stack{display:grid;gap:10px;margin:0 0 18px;padding:0}
+  .stack li{list-style:none;display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);
+    padding:10px 0;font-size:.96rem}
+  .stack li .v{color:var(--muted);white-space:nowrap}
+  .pricebox{text-align:center;margin:10px 0 18px}
+  .from{color:var(--faint);text-decoration:line-through;font-size:1rem}
+  .now{font-weight:900;line-height:1;margin:4px 0 2px}
+  .now .big{font-size:3.2rem;color:#fff} .now small{font-size:1.2rem;color:var(--muted)}
+  .installments{color:var(--muted);font-size:.9rem}
+  .guar{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .guar .seal{flex:0 0 auto;width:66px;height:66px;border-radius:50%;border:2px solid var(--red);
+    display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--red);text-align:center;font-size:.72rem;line-height:1.05}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 16px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;position:relative;padding-right:28px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:4px;top:12px;color:var(--red);font-size:1.3rem;font-weight:900}
+  details[open] summary::after{content:"\2013"}
+  details p{padding:0 0 14px;margin:0;color:var(--muted)}
+  footer{border-top:1px solid var(--line);padding:30px 0 120px;color:var(--faint);font-size:.8rem}
+  footer a{color:var(--muted)}
+  #sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(9,9,11,.97);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);padding:11px 16px;display:flex;align-items:center;gap:14px;justify-content:space-between;
+    transition:transform .25s ease;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
   #sticky.hide{transform:translateY(130%)}
-  #sticky .px{font-size:.82rem;color:var(--muted);line-height:1.1} #sticky .px b{color:#fff;font-size:1rem}
-  #sticky .cta{padding:12px 18px;font-size:.98rem}
-  @media(max-width:760px){
-    h1{font-size:1.85rem} h2{font-size:1.42rem}
-    .hero-grid{grid-template-columns:1fr;gap:28px} .hero .phone{order:2}
-    .strip .row{grid-template-columns:1fr 1fr;gap:20px 14px}
-    .pain-grid,.codes,.forwho,.material{grid-template-columns:1fr}
-    .phones{grid-template-columns:1fr;max-width:300px;margin-inline:auto}
-    .steps,.testi-grid{grid-template-columns:1fr}
-    .books{margin:0 auto} .book.b2{margin-left:-30px}
+  #sticky .px{font-size:.82rem;color:var(--muted);line-height:1.1} #sticky .px b{color:#fff;font-size:1.05rem}
+  #sticky .cta{padding:12px 18px;font-size:.95rem}
+  @media(max-width:640px){
+    .grid2,.grid3,.cats,.stats{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
     #sticky .px{display:none} #sticky .cta{width:100%}
   }
 </style>
 </head>
 <body>
 
-<div class="wrap">
+<header class="wrap">
   <div class="topbar">
-    <div class="brand">O <span>Código</span></div>
-    <div class="tag">Manual prático • edição digital</div>
-  </div>
-</div>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="eyebrow">Pra todo homem que já ficou no "visualizado"</p>
-      <h1>Ela respondia bem. Aí você mandou <em>aquela</em> mensagem — e o "visto" nunca mais virou resposta.</h1>
-      <p class="lede">Não é porque você é feio, baixo ou "sem grana". É porque <b>ninguém nunca te ensinou o que mandar na hora certa.</b> O Código te dá a mensagem pronta pra cada situação — do primeiro "oi" ao "quer sair comigo?" — pra você parar de travar na frente da tela e nunca mais ser esquecido.</p>
-      <a href="#oferta" class="cta">QUERO PARAR DE TRAVAR →</a>
-      <div class="hero-badges">
-        <span class="hb">📲 Acesso imediato no celular</span>
-        <span class="hb">✅ Tinder, Insta e vida real</span>
-        <span class="hb">🔒 Garantia de 7 dias</span>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <img class="hero-img" src="cc-casais.webp" alt="Homens comuns, do seu jeito, ao lado de mulheres incríveis" loading="eager">
-    </div>
+    <img src="vorcaro-logo.webp" alt="Código Vórcaro">
+    <span class="badge">Método prático &middot; edição digital</span>
   </div>
 </header>
 
-<!-- STRIP -->
-<div class="strip">
-  <div class="wrap">
-    <div class="row">
-      <div><div class="big">2</div><div class="lbl">Códigos: conquista + reconquista</div></div>
-      <div><div class="big">+80</div><div class="lbl">mensagens prontas pra copiar</div></div>
-      <div><div class="big">7 dias</div><div class="lbl">plano de ação do zero</div></div>
-      <div><div class="big">∞</div><div class="lbl">acesso vitalício no celular</div></div>
-    </div>
+<section class="hero section wrap center">
+  <div class="eyebrow">A fofoca é real: eles estão usando isso…</div>
+  <h1>300 mensagens prontas que fazem ela <b>responder, se interessar</b> e <b>querer te ver</b>.</h1>
+  <p class="lead muted">Não é porque você é feio, baixo ou "sem papo". É porque ninguém nunca te ensinou <b style="color:#fff">o que mandar na hora certa</b>. O Código Vórcaro te dá a mensagem pronta pra cada situação — do primeiro "oi" ao "quando a gente se vê?".</p>
+  <div class="hero-badges">
+    <span class="pill"><span class="dot"></span> WhatsApp e SMS</span>
+    <span class="pill"><span class="dot"></span> 10 categorias</span>
+    <span class="pill"><span class="dot"></span> Exemplos práticos</span>
   </div>
-</div>
+  <a href="https://pay.cakto.com.br/7uqtb6e_1263698" id="checkout" class="cta lg">QUERO O CÓDIGO VÓRCARO AGORA <span class="arw">&rsaquo;</span></a>
+  <div class="cta-sub">⚡ Acesso imediato · 📱 Funciona em qualquer app · 🔒 100% discreto</div>
 
-<!-- PAIN -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Você se reconhece aqui?</p>
-    <h2>O problema não é falta de mulher. É não saber <em>o que falar</em>.</h2>
-    <div class="pain-grid">
-      <div class="pcard"><p><span class="x">✕</span> Você lê a mensagem dela 5 vezes e <b>trava</b> sem saber como responder.</p></div>
-      <div class="pcard"><p><span class="x">✕</span> O papo <b>morre em duas mensagens</b> e você não entende por quê.</p></div>
-      <div class="pcard"><p><span class="x">✕</span> Ela te deixa no <b>"visualizado"</b> — e você fica remoendo a noite inteira.</p></div>
-      <div class="pcard"><p><span class="x">✕</span> Quer chamar pra sair, mas <b>tem medo de levar um fora</b> e nem tenta.</p></div>
-      <div class="pcard"><p><span class="x">✕</span> Na ansiedade, <b>manda mensagem demais</b> — e afasta ela.</p></div>
-      <div class="pcard"><p><span class="x">✕</span> Levou um pé e não sabe <b>se tenta voltar ou segue em frente</b> sem se humilhar.</p></div>
+  <div class="hero-img"><img src="cc-casais.webp" alt="Casais reais que destravaram a conversa" loading="eager"></div>
+
+  <div class="stats">
+    <div><b>300</b><span>mensagens prontas</span></div>
+    <div><b>10</b><span>categorias</span></div>
+    <div><b>2 min</b><span>pra usar a 1ª</span></div>
+    <div><b>&infin;</b><span>acesso vitalício</span></div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2 class="center">Você já perdeu uma mulher por não saber o que escrever?</h2>
+  <p class="center muted" style="max-width:600px;margin:0 auto 24px">Se você travou numa conversa boa, demorou pra responder e ela sumiu, ou mandou "aquela" mensagem e virou "visto" pra sempre — o problema nunca foi você. Foi a falta de um roteiro.</p>
+  <div class="pain">
+    <ul>
+      <li>😶 Ela responde bem, aí você não sabe o que mandar e a conversa esfria.</li>
+      <li>⏳ Você fica 20 minutos pensando numa frase… e ainda sai sem graça.</li>
+      <li>👻 Mandou um "oi, tudo bem?" e caiu no limbo do "visto".</li>
+      <li>😬 Na hora de chamar pra sair, trava e deixa a chance passar.</li>
+      <li>🔁 A conversa some e você não tem como reacender sem parecer desesperado.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="card center">
+    <span class="tag">O que é o Código Vórcaro</span>
+    <h2 style="margin-top:16px">Um banco com <span class="red">300 mensagens testadas</span>, organizadas por situação — é só copiar, adaptar e colar.</h2>
+    <p class="muted">Você abre no celular, acha a situação em que está, pega a mensagem certa e manda. Sem travar, sem "deixa eu pensar", sem perder a mulher por não saber o que dizer. Funciona em WhatsApp, SMS, Tinder, Instagram — qualquer app.</p>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2 class="center">As 10 categorias que cobrem <span class="red">qualquer conversa</span></h2>
+  <p class="center muted" style="max-width:560px;margin:0 auto 22px">Da primeira mensagem ao encontro marcado — tem mensagem pronta pra cada degrau.</p>
+  <div class="cats">
+    <div class="cat"><span class="n">01</span><div><b>Primeira mensagem</b><span>Abrir a conversa sem ser mais um "oi"</span></div></div>
+    <div class="cat"><span class="n">02</span><div><b>Flertes leves e divertidos</b><span>Criar tensão no tom certo</span></div></div>
+    <div class="cat"><span class="n">03</span><div><b>Criar conexão</b><span>Fazer ela sentir que combina com você</span></div></div>
+    <div class="cat"><span class="n">04</span><div><b>Convidar para sair</b><span>Chamar pro encontro sem medo do "não"</span></div></div>
+    <div class="cat"><span class="n">05</span><div><b>Retomar conversa</b><span>Voltar depois do "sumiço" sem parecer carente</span></div></div>
+    <div class="cat"><span class="n">06</span><div><b>Respostas difíceis</b><span>O que dizer quando ela testa ou enrola</span></div></div>
+    <div class="cat"><span class="n">07</span><div><b>Carinhosas e românticas</b><span>Aquecer sem ser brega</span></div></div>
+    <div class="cat"><span class="n">08</span><div><b>Reacender o desejo</b><span>Puxar a atração quando esfriou</span></div></div>
+    <div class="cat"><span class="n">09</span><div><b>Fechar o encontro</b><span>Transformar o "quem sabe" em dia e hora</span></div></div>
+    <div class="cat"><span class="n">10</span><div><b>Exemplos práticos prontos</b><span>Modelos completos pra copiar e colar</span></div></div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2 class="center">O que elas mandam <span class="red">depois</span> que você usa as mensagens certas</h2>
+  <p class="center muted" style="margin-bottom:24px">Exemplos de respostas no tom que o Código Vórcaro ativa.</p>
+  <div class="chats">
+    <div class="chat"><span class="heart">❤️</span><div class="who">Ela</div><p>Nossa, você fala muito bem… não esperava esse papo kkk</p><span class="time">22:14 ✓✓</span></div>
+    <div class="chat"><span class="heart">❤️</span><div class="who">Ela</div><p>Tô aqui te pensando… 😊</p><span class="time">23:02 ✓✓</span></div>
+    <div class="chat"><div class="who">Ela</div><p>Que delícia de conversa… quando a gente se vê? 😈</p><span class="time">23:18 ✓✓</span></div>
+    <div class="chat"><div class="who">Ela</div><p>Nem acredito que a gente tem tanta coisa em comum… 😍</p><span class="time">00:07 ✓✓</span></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="band">
+    <img src="cc-sunset.webp" alt="">
+    <div class="bx">
+      <h2>Pare de assistir todo mundo marcar encontro<br>enquanto você fica no "visualizado".</h2>
+      <p class="muted" style="margin:10px 0 0">A diferença entre quem sai e quem fica no vácuo não é aparência. É saber o que escrever.</p>
     </div>
   </div>
 </section>
 
-<!-- REFRAME -->
-<section class="reframe">
-  <div class="wrap narrow">
-    <div class="box">
-      <p class="eyebrow">A real</p>
-      <h2>O problema nunca foi você. Foi o que você mandou — e o que você <em>não</em> mandou.</h2>
-      <p>Toda vez que ela esfriou, existia uma mensagem certa que você podia ter mandado e não mandou. Um jeito de responder ao "você tem namorada?", de agir quando ela sumiu, de chamar pro encontro sem parecer desesperado. Homem nenhum nasce sabendo isso — isso se <b>aprende</b>. Por isso virou um atalho: um manual de consulta rápida com a mensagem pronta pra cada situação, pra você nunca mais ficar no escuro na frente da tela.</p>
+<section class="section wrap">
+  <h2 class="center">Por que isso funciona (e rápido)</h2>
+  <div class="check" style="max-width:560px;margin:22px auto 0">
+    <ul>
+      <li><span class="ic">✓</span><div><b>Mensagens testadas</b> — modelos que já puxaram resposta de verdade, não teoria.</div></li>
+      <li><span class="ic">✓</span><div><b>Funciona em qualquer app</b> — WhatsApp, SMS, Tinder, Instagram, Bumble.</div></li>
+      <li><span class="ic">✓</span><div><b>Economiza seu tempo</b> — chega de ficar 20 min pensando numa frase.</div></li>
+      <li><span class="ic">✓</span><div><b>Mais respostas</b> — você manda a mensagem certa na hora certa.</div></li>
+      <li><span class="ic">✓</span><div><b>Mais encontros reais</b> — a conversa deixa de morrer no chat.</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section wrap">
+  <h2 class="center">Como usar em 3 passos</h2>
+  <div class="steps" style="max-width:600px;margin:22px auto 0">
+    <div class="step"><span class="num">1</span><div><b>Abra no celular.</b> Acesso imediato, direto do seu aparelho, sem instalar nada.</div></div>
+    <div class="step"><span class="num">2</span><div><b>Ache a situação.</b> "Ela sumiu", "quero chamar pra sair", "primeira mensagem"… tem categoria pra tudo.</div></div>
+    <div class="step"><span class="num">3</span><div><b>Copie, adapte e mande.</b> Em segundos você manda a mensagem certa — e vê a conversa mudar.</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="band">
+    <img src="cc-bed.webp" alt="">
+    <div class="bx">
+      <h2>Pra quem é o Código Vórcaro</h2>
+      <p class="muted" style="margin:10px 0 0;max-width:560px">Pra todo homem que já ficou no "visualizado", que trava na hora de puxar papo, que não sabe chamar pra sair sem medo do "não" — e que está cansado de ver a conversa morrer sem motivo.</p>
     </div>
   </div>
 </section>
 
-<!-- BAND 1 -->
-<section style="padding-top:0">
-  <div class="wrap narrow">
-    <div class="band">
-      <img src="cc-bed.webp" alt="Casal junto em casa" loading="lazy">
-      <div class="cap"><p>Não começa com beleza nem com grana. Começa com a mensagem certa.</p><div class="sm">E a mensagem certa pode ser aprendida — hoje.</div></div>
+<section class="section wrap" id="oferta">
+  <div class="offer">
+    <div class="center"><span class="tag">Oferta de lançamento</span></div>
+    <h2 class="center" style="margin:16px 0 18px">Leve o Código Vórcaro completo hoje</h2>
+    <ul class="stack">
+      <li><span>📲 As 300 mensagens prontas (10 categorias)</span><span class="v">R$ 67</span></li>
+      <li><span>🔥 Seção "Reacender o desejo" + fechar o encontro</span><span class="v">incluso</span></li>
+      <li><span>💬 Exemplos práticos prontos pra copiar e colar</span><span class="v">incluso</span></li>
+      <li><span>⚡ Acesso imediato e vitalício no celular</span><span class="v">incluso</span></li>
+    </ul>
+    <div class="pricebox">
+      <div class="from">De R$ 67</div>
+      <div class="now"><small>R$</small> <span class="big">27</span><small>,00</small></div>
+      <div class="installments">ou 6x de R$ 5,22 · pagamento único, sem mensalidade</div>
+    </div>
+    <a href="https://pay.cakto.com.br/7uqtb6e_1263698" class="cta block lg">QUERO O CÓDIGO VÓRCARO AGORA <span class="arw">&rsaquo;</span></a>
+    <div class="cta-sub center">⚡ Acesso imediato · 📱 WhatsApp ou SMS · 🔒 100% discreto</div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="guar">
+    <div class="seal">7<br>DIAS</div>
+    <div>
+      <b>Garantia de 7 dias.</b>
+      <p class="muted" style="margin:6px 0 0">Testa as mensagens. Se em 7 dias você achar que não vale, é só pedir — a gente devolve 100% do seu dinheiro. O risco é todo nosso.</p>
     </div>
   </div>
 </section>
 
-<!-- CODES -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">O que você leva hoje</p>
-    <h2>Dois Códigos. Um pra <em>conquistar</em>, um pra <em>reconquistar</em>.</h2>
-    <div class="codes">
-      <div class="code">
-        <span class="n">Código 01 · Conquista</span>
-        <h3>Do primeiro "oi" ao primeiro encontro</h3>
-        <ul>
-          <li>Como <b>puxar assunto</b> (exemplos reais pra Insta, festa, academia, faculdade e trabalho)</li>
-          <li>O que mandar de <b>manhã, tarde e noite</b> sem parecer carente</li>
-          <li>O que responder quando ela testa: "você tem namorada?", "você parece diferente"</li>
-          <li>O que fazer <b>quando ela some ou demora</b> — sem se humilhar nem cobrar</li>
-          <li>Como <b>flertar</b> sem exagerar e perceber quando o interesse é mútuo</li>
-          <li>Como <b>chamar pro encontro</b> de um jeito que o "sim" fica fácil</li>
-          <li>O roteiro do <b>primeiro encontro</b>: antes, durante e depois</li>
-          <li>Plano de <b>7 dias</b> + checklist antes de cada mensagem</li>
-        </ul>
-      </div>
-      <div class="code">
-        <span class="n">Código 02 · Reconquista</span>
-        <h3>Como voltar — ou virar a página de cabeça erguida</h3>
-        <ul>
-          <li>As <b>6 perguntas</b> pra responder <i>antes</i> de tentar voltar (a maioria pula e estraga tudo)</li>
-          <li>A <b>primeira mensagem</b> depois do término — e as 3 frases que destroem qualquer chance</li>
-          <li>Como <b>pedir desculpa sem se rebaixar</b> (a estrutura de 4 passos)</li>
-          <li>Como <b>ler a resposta dela</b> de verdade — não o que você quer ouvir</li>
-          <li>Como <b>mostrar mudança com atitude</b>, não com promessa vazia</li>
-          <li>Os <b>sinais reais</b> de que dá pra recomeçar — ou a hora de seguir em frente</li>
-          <li>Como <b>se recuperar</b> e sair mais forte, com ou sem ela</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<section class="section wrap">
+  <h2 class="center" style="margin-bottom:22px">Perguntas rápidas</h2>
+  <details><summary>Como eu recebo o acesso?</summary><p>Na hora. Assim que o pagamento é aprovado, você recebe o acesso pra abrir direto no celular. Sem esperar, sem instalar nada.</p></details>
+  <details><summary>Funciona em qualquer aplicativo?</summary><p>Sim. As mensagens servem pra WhatsApp, SMS, Tinder, Instagram, Bumble — qualquer app onde você conversa.</p></details>
+  <details><summary>Preciso decorar tudo?</summary><p>Não. É um banco de mensagens: você acha a situação, copia a mensagem certa e adapta em segundos.</p></details>
+  <details><summary>É discreto?</summary><p>100%. O nome na fatura é discreto e o conteúdo é só seu, no seu celular.</p></details>
+  <details><summary>E se não funcionar pra mim?</summary><p>Você tem 7 dias de garantia. Não gostou, devolvemos todo o valor.</p></details>
 </section>
 
-<!-- INSIDE / SCREENSHOTS -->
-<section class="inside">
-  <div class="wrap">
-    <p class="eyebrow center">Por dentro</p>
-    <h2 class="center">Não é teoria. É a <em>mensagem pronta</em> pra copiar, adaptar e mandar.</h2>
-    <div class="phones">
-      <div>
-        <div class="phone">
-          <div class="screen">
-            <div class="wa-head"><div class="wa-av"></div><div><div class="wa-nm">Match do app</div><div class="wa-st">digitando…</div></div></div>
-            <div class="wa-body">
-              <div class="daychip">quando o papo morre</div>
-              <div class="msg in">kkk<span class="t">19:40</span></div>
-              <div class="msg out">Pergunta séria pra fechar o dia: você é mais praia ou montanha? 🏔️<span class="t">19:41 ✓✓</span></div>
-              <div class="msg in">Montanha com certeza! amo friozinho<span class="t">19:43</span></div>
-              <div class="msg out">Anotado. Já sei o plano do nosso primeiro rolê então 😏<span class="t">19:43 ✓✓</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="cap">Reacendendo a conversa</div>
-      </div>
-      <div>
-        <div class="phone">
-          <div class="screen">
-            <div class="wa-head"><div class="wa-av"></div><div><div class="wa-nm">Ela 💛</div><div class="wa-st">visto por último hoje</div></div></div>
-            <div class="wa-body">
-              <div class="daychip">quando ela te deixa no vácuo</div>
-              <div class="msg out">Oi! Como foi a semana?<span class="t">12:02 ✓✓</span></div>
-              <div class="msg in">(só o visualizado)<span class="t"> </span></div>
-              <div class="msg out">Resolve suas coisas com calma 👊 quando der a gente continua<span class="t">18:30 ✓✓</span></div>
-              <div class="msg in">Aiii desculpa, semana insana 😅 agora te respondo direito<span class="t">21:15</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="cap">Virando o "visto" em resposta</div>
-      </div>
-      <div>
-        <div class="phone">
-          <div class="screen">
-            <div class="wa-head"><div class="wa-av"></div><div><div class="wa-nm">Ex</div><div class="wa-st">online</div></div></div>
-            <div class="wa-body">
-              <div class="daychip">depois do término</div>
-              <div class="msg out">Oi, Ana. Tenho refletido sobre o que aconteceu e reconheço coisas minhas que pesaram. Não é pra te pressionar — só queria reconhecer.<span class="t">10:12 ✓✓</span></div>
-              <div class="msg in">Nossa… não esperava isso de você. Obrigada por falar<span class="t">10:40</span></div>
-              <div class="msg in">A gente pode conversar com calma?<span class="t">10:41</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="cap">Reabrindo a porta sem se humilhar</div>
-      </div>
-    </div>
-
-    <!-- MATERIAL MOCKUP -->
-    <div class="material">
-      <div class="books">
-        <div class="book b1"><div class="inner"><div class="bk">Código 01</div><div class="line"></div><div class="bt">CÓDIGO DA CONQUISTA</div></div></div>
-        <div class="book b2"><div class="inner"><div class="bk">Código 02</div><div class="line"></div><div class="bt">CÓDIGO DA RECONQUISTA</div></div></div>
-      </div>
-      <div>
-        <p class="eyebrow">O material</p>
-        <h3 style="font-size:1.35rem;margin-bottom:.7rem">Dois manuais diretos, pra ler no celular em qualquer lugar</h3>
-        <p class="muted">Sem enrolação e sem "mimimi". Cada capítulo é uma situação real com a mensagem pronta embaixo. Você abre, acha a situação parecida com a sua, adapta ao seu jeito e manda. Dá pra ler tudo numa tarde — e usar pra sempre como consulta rápida.</p>
-      </div>
-    </div>
-  </div>
+<section class="section wrap center">
+  <h2>A próxima conversa pode ser a que vira encontro.</h2>
+  <p class="muted" style="max-width:520px;margin:0 auto 22px">Por R$ 27 você para de travar hoje e passa a ter a mensagem certa pra cada situação.</p>
+  <a href="https://pay.cakto.com.br/7uqtb6e_1263698" class="cta lg">QUERO O CÓDIGO VÓRCARO POR R$ 27 <span class="arw">&rsaquo;</span></a>
 </section>
 
-<!-- HOW -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow center">Como funciona</p>
-    <h2 class="center">Do pagamento à primeira mensagem certa em <em>minutos</em></h2>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h3>Garante seu acesso</h3><p>Pagamento no Pix (cai na hora) ou cartão. Compra 100% segura.</p></div>
-      <div class="step"><div class="num">2</div><h3>Recebe na hora</h3><p>O acesso chega no seu e-mail e você abre os 2 Códigos pelo celular.</p></div>
-      <div class="step"><div class="num">3</div><h3>Aplica hoje</h3><p>Acha a situação, copia a mensagem certa, adapta ao seu jeito e manda.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- FOR WHO -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Pra quem é (e pra quem não é)</p>
-    <h2>Seja honesto com você mesmo.</h2>
-    <div class="forwho">
-      <div class="fw yes">
-        <h3>É pra você se…</h3>
-        <ul>
-          <li>Você trava, fica no "oi" e não sabe continuar</li>
-          <li>Já perdeu gente boa por não saber o que mandar</li>
-          <li>É tímido ou "sem papo" e quer um ponto de partida</li>
-          <li>Levou um fora e quer agir com a cabeça fria</li>
-          <li>Quer parar de depender de sorte e começar a saber o que fazer</li>
-        </ul>
-      </div>
-      <div class="fw no">
-        <h3>Não é pra você se…</h3>
-        <ul>
-          <li>Procura truque pra manipular ou enganar alguém</li>
-          <li>Quer "fórmula mágica" que não exige nenhuma ação sua</li>
-          <li>Não aceita respeitar um "não"</li>
-          <li>Acha que não precisa mudar nada no que faz hoje</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="inside">
-  <div class="wrap">
-    <p class="eyebrow center">Quem já está aplicando</p>
-    <h2 class="center">O que os caras estão dizendo</h2>
-    <div class="testi-grid">
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <p class="q">"Eu travava total. Peguei os scripts, adaptei e no mesmo dia uma conversa que tava morta voltou. Marquei encontro na semana seguinte."</p>
-        <div class="who"><div class="av">R</div><div><div class="nm">Rafael M.</div><div class="meta">verificado • compra confirmada</div></div></div>
-      </div>
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <p class="q">"O Código da Reconquista me fez parar de surtar. Entendi que não era hora, mandei a mensagem certa, e a conversa abriu de novo sem eu me humilhar."</p>
-        <div class="who"><div class="av">D</div><div><div class="nm">Diego A.</div><div class="meta">verificado • compra confirmada</div></div></div>
-      </div>
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <p class="q">"Achei que ia ser papo de guru. É o oposto: direto, respeitoso e prático. Parei de mandar mensagem demais e o papo começou a fluir."</p>
-        <div class="who"><div class="av">L</div><div><div class="nm">Lucas T.</div><div class="meta">verificado • compra confirmada</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BAND 2 -->
-<section style="padding-bottom:0">
-  <div class="wrap narrow">
-    <div class="band">
-      <img src="cc-sunset.webp" alt="Casal no pôr do sol" loading="lazy">
-      <div class="cap"><p>O próximo pôr do sol pode ser o seu.</p><div class="sm">A diferença entre olhar de longe e estar na foto é saber o que falar.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- OFFER -->
-<section class="offer" id="oferta">
-  <div class="wrap">
-    <p class="eyebrow center">Oferta de lançamento</p>
-    <h2 class="center">Os 2 Códigos. Acesso imediato.</h2>
-    <div class="obox">
-      <p class="muted">Pague uma vez. É seu pra sempre, no celular.</p>
-      <div class="stack">
-        <div class="it"><b>Código 01 — Conquista</b><span class="v">R$ 67</span></div>
-        <div class="it"><b>Código 02 — Reconquista</b><span class="v">R$ 67</span></div>
-        <div class="it"><b>Plano de 7 dias + checklists</b><span class="v">incluso</span></div>
-      </div>
-      <div class="price">
-        <div class="from">De R$ 134</div>
-        <div class="now"><small>R$</small>27<small>,00</small></div>
-        <div class="pay">à vista no Pix ou em até 3x no cartão</div>
-      </div>
-      <a href="https://pay.cakto.com.br/7uqtb6e_1263698" id="checkout" class="cta block lg">QUERO OS 2 CÓDIGOS AGORA →</a>
-      <div class="seal">🔒 Compra 100% segura • acesso na hora por e-mail</div>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section class="guar">
-  <div class="wrap narrow">
-    <div class="box">
-      <div class="sb"><b>7</b><span>DIAS</span></div>
-      <div>
-        <h3>Garantia incondicional de 7 dias</h3>
-        <p class="muted" style="margin-top:.4rem">Leia, aplique, teste nas suas conversas. Se em 7 dias você achar que não valeu, é só pedir — a gente devolve cada centavo, sem pergunta nenhuma. O risco é todo nosso.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="wrap narrow">
-    <p class="eyebrow">Perguntas frequentes</p>
-    <h2>Ainda na dúvida?</h2>
-    <details><summary>Funciona mesmo se eu sou tímido ou "sem papo"? <span class="plus">+</span></summary><p>Funciona principalmente pra você. O Código foi feito pra quem trava — são mensagens prontas e um passo a passo pra começar sem depender de "ser engraçado" ou "ter lábia".</p></details>
-    <details><summary>Isso é manipulação / pegação tóxica? <span class="plus">+</span></summary><p>Não. É o oposto. O Código ensina comunicação com clareza, confiança e respeito — inclusive a reconhecer quando o interesse não é mútuo e seguir em frente. Nada de truque pra forçar ninguém.</p></details>
-    <details><summary>Serve pra app (Tinder, Bumble) ou só pra vida real? <span class="plus">+</span></summary><p>Os dois. Os exemplos cobrem Instagram, apps, festa, academia, faculdade, trabalho e amigos em comum.</p></details>
-    <details><summary>Como eu recebo? <span class="plus">+</span></summary><p>Na hora. Assim que o pagamento é aprovado, você recebe o acesso por e-mail e abre tudo pelo celular. É digital — nada chega pela casa.</p></details>
-    <details><summary>E se eu já tiver levado o fora? <span class="plus">+</span></summary><p>Aí o Código 02 (Reconquista) é pra você: ajuda a avaliar com a cabeça fria se dá pra voltar, o que mandar, e como virar a página sem se humilhar caso não dê.</p></details>
-    <details><summary>E se não funcionar pra mim? <span class="plus">+</span></summary><p>Você tem 7 dias de garantia. Não gostou, pede o reembolso e pronto.</p></details>
-  </div>
-</section>
-
-<!-- FINAL -->
-<section class="final offer">
-  <div class="wrap">
-    <h2>Você já perdeu gente boa por não saber o que mandar. Hoje isso acaba.</h2>
-    <a href="#oferta" class="cta lg">QUERO OS 2 CÓDIGOS POR R$ 27 →</a>
-    <p class="sub-cta">Acesso imediato • garantia de 7 dias • no seu celular</p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="disc">
-      <b>Aviso:</b> este é um material educativo de comunicação e relacionamento. Ele <b>não garante</b> atração, resposta ou reconciliação — nenhum roteiro garante. Os exemplos são modelos para adaptar ao seu jeito. Respeite sempre a autonomia, os limites e o "não" da outra pessoa. Resultados dependem de dedicação, contexto e interesse mútuo.
-    </div>
-    <div>© O Código — Conteúdo digital para maiores de 18 anos. Todos os direitos reservados.</div>
-  </div>
+<footer class="wrap">
+  <p>Código Vórcaro — material digital de conteúdo. Este produto não garante resultados específicos; os resultados variam conforme o uso e cada pessoa. Conteúdo voltado a relacionamentos, para maiores de 18 anos. Não temos relação com WhatsApp, Meta, Tinder ou qualquer app citado.</p>
+  <p style="margin-top:10px">© Código Vórcaro. Todos os direitos reservados.</p>
 </footer>
 
 <div id="sticky">
-  <div class="px"><b>R$ 27</b><br>os 2 Códigos</div>
-  <a href="#oferta" class="cta">Quero agora →</a>
+  <div class="px">Código Vórcaro<br><b>R$ 27</b> <span style="color:var(--faint)">· 300 mensagens</span></div>
+  <a href="https://pay.cakto.com.br/7uqtb6e_1263698" class="cta">Quero agora &rsaquo;</a>
 </div>
 
 <script>
   (function(){
     var s=document.getElementById('sticky'), off=document.getElementById('oferta');
-    function sync(){ if(!off||!s)return; var t=off.getBoundingClientRect().top; s.classList.toggle('hide', t < window.innerHeight*0.9); }
-    window.addEventListener('scroll',sync,{passive:true}); window.addEventListener('resize',sync,{passive:true}); sync();
-    // CHECKOUT: trocar '#' pelo link do produto na Cakto nos dois botoes (#checkout e os <a href="#oferta"> ja rolam ate a oferta)
-    // document.getElementById('checkout').href = 'https://pay.cakto.com.br/XXXX';
+    if(!s||!off) return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){ s.classList.toggle('hide', e.isIntersecting); });},{threshold:.2});
+    io.observe(off);
   })();
-</script>
-<script>
-(function(){var b=document.getElementById('checkout');if(b){b.addEventListener('click',function(){try{if(window.fbq)fbq('track','InitiateCheckout');}catch(e){}});}})();
+  (function(){
+    document.querySelectorAll('a[href*="pay.cakto.com.br"]').forEach(function(b){
+      b.addEventListener('click',function(){ try{ if(window.fbq) fbq('track','InitiateCheckout'); }catch(e){} });
+    });
+  })();
 </script>
 </body>
 </html>
